@@ -1,0 +1,55 @@
+@import "../../../styles/variables";
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: $spacing-6;
+
+  @include responsive(sm) {
+    padding: $spacing-8;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: $spacing-6;
+}
+
+.title {
+  color: $color-primary;
+  font-size: 2rem;
+  margin-bottom: $spacing-2;
+}
+
+.subtitle {
+  color: $color-gray-600;
+  font-size: $font-size-lg;
+}
+
+.error {
+  background-color: rgba($color-danger, 0.1);
+  color: $color-danger;
+  padding: $spacing-4;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-4;
+  text-align: center;
+
+  p {
+    margin-bottom: $spacing-2;
+  }
+
+  button {
+    background-color: $color-danger;
+    color: $color-white;
+    border: none;
+    padding: $spacing-2 $spacing-4;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: darken($color-danger, 10%);
+    }
+  }
+}
